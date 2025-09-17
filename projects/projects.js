@@ -75,13 +75,25 @@ function doExponential() {
     if (checkInput(numOne.value, numTwo.value)) {
         let num1 = Number(numOne.value)
         let num2 = Number(numTwo.value)
-        if (! Number.isInteger(num2) || num2 < 0) {
+        if (! Number.isInteger(num2) || (num1 === 0 && num2 < 0)) {
             output.innerHTML = ("Exponential numbers must be positive integers!");
-        } else {
+        } else if (num2 >= 0){
             let result = 1
             for (let i = 1; i <= num2; i++) {
                 result *= num1
             }
+            if (result < 0) {
+                output.style.color = "red"
+            } else {
+                output.style.color = "saddlebrown"
+            }
+            output.innerHTML = String(result);
+        } else {
+            let result = 1
+            for (let i = 1; i <= -(num2); i++) {
+                result *= num1
+            }
+            result = 1/result
             if (result < 0) {
                 output.style.color = "red"
             } else {
