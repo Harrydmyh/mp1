@@ -1,0 +1,64 @@
+<!-- skills.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Skills | Resume</title>
+    <link rel="stylesheet" href="projects.css" type="text/css">
+</head>
+<body>
+<div id="page_wrapper">
+    <header>
+        <div id="header">
+            <h1>Yihang Duanmu</h1>
+            <p>My online resume</p>
+        </div>
+    </header>
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../education/education.html">Education</a></li>
+                <li><a href="../employment/employment.html">Employment</a></li>
+                <li><a href="../evaluation/evaluation.html">Evaluation</a></li>
+                <li><a href="../skills/skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="calculator">
+                <h2>Calculator</h2>
+                <div id="input_box">
+                    <label for="num1"></label>
+                    <input id="num1">
+                    <label for="num2"></label>
+                    <input id="num2">
+                </div>
+                <div id="operation_box">
+                    <button type="submit" id="add" onclick="doAdd()">+</button>
+                    <button type="submit" id="subtract" onclick="doSubtract()">-</button>
+                    <button type="submit" id="multiplication" onclick="doMultiply()">*</button>
+                    <button type="submit" id="division" onclick="doDivide()">/</button>
+                    <button type="submit" id="exponentiation" onclick="doExponential()">**</button>
+                </div>
+
+                <div id="clear_box">
+                <button type="button" id="clear" onclick="doRemove()">clear</button>
+                </div>
+
+                <div id="result_box">
+                <h3 id="result">Answer: </h3>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <footer>
+        <p>All Rights Reserved by Yihang Duanmu <a href="#">Credits</a> &#169;</p>
+    </footer>
+</div>
+<script src="projects.js"></script>
+</body>
+</html>
